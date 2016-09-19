@@ -9,7 +9,7 @@ dataf= as.data.frame(newData[-1,], stringsAsFactors=F)
 ### subset data 
 dataToUse = subset(dataf, Date =="1/2/2007" | Date == "2/2/2007")
 ### plot chart & save as png
-png(filename = "plot2.png")
+png(filename = "plot2.png", width=480, height=480)
 dateTime = as.POSIXct(paste(dataToUse$Date, dataToUse$Time), format="%d/%m/%Y %H:%M:%S")
 plot(dateTime,
      dataToUse$Global_active_power,

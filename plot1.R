@@ -9,7 +9,7 @@ dataf= as.data.frame(newData[-1,], stringsAsFactors=F)
 ### subset data 
 dataToUse = subset(dataf, Date =="1/2/2007" | Date == "2/2/2007")
 ### histogram chart & save as png
-png(filename = "plot1.png")
+png(filename = "plot1.png", width=480, height=480)
 hist(as.numeric(dataToUse$Global_active_power),
      main="Global Active Power",
      xlab="Global Active Power (kilowatts)",
